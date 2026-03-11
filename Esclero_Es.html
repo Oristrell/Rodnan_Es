@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Modified Rodnan Skin Score Calculator</title>
+
+<style>
+
+body{
+background-color:#87CEEB;
+font-family:Arial, sans-serif;
+margin:0;
+padding:40px 0;
+}
+
+
+.container{
+background:#fffde7;
+width:600px;
+padding:30px;
+border-radius:12px;
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+margin:40px auto;
+padding-left:3cm;
+}
+
+.title{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:15px;
+font-size:18px;
+font-weight:bold;
+color:#3366cc;
+border:2px solid #3366cc;
+border-radius:8px;
+background:#e6f0ff;
+padding:6px;
+margin-bottom:25px;
+}
+
+.title-text{
+flex-grow:1;
+text-align:center;
+margin-right:60px;
+margin:0;
+}
+
+.grid{
+display:grid;
+grid-template-columns: 200px 120px 120px 120px;
+align-items:center;
+row-gap:8px;
+}
+
+.header{
+font-weight:bold;
+text-align:center;
+}
+
+.header div{
+line-height:1.2;
+}
+
+.area{
+font-weight:normal;
+}
+
+.separator{
+grid-column:1 / 5;
+margin:12px 0 6px 0;
+font-weight:bold;
+color:#3366cc;
+border-bottom:1px solid #ccc;
+padding-bottom:3px;
+}
+
+.center{
+text-align:center;
+}
+
+button{
+padding:10px 20px;
+font-size:16px;
+border-radius:6px;
+border:none;
+cursor:pointer;
+margin-top:20px;
+margin-right:10px;
+background-color:#3366cc;
+color:white;
+}
+
+.buttons{
+text-align:center;
+margin-top:30px;
+}
+
+button:hover{opacity:0.85;}
+
+.result{
+font-size:20px;
+font-weight:bold;
+margin-top:20px;
+}
+
+.references{
+margin-top:35px;
+font-size:10px;
+line-height:1.4;
+color:#333;
+border-top:1px solid #ccc;
+padding-top:15px;
+}
+
+.references b{
+color:#3366cc;
+}
+
+.figure{
+margin-top:25px;
+text-align:center;
+}
+
+.figure img{
+max-width:50%;
+height:auto;
+border-radius:6px;
+}
+
+.logo{
+width:60px;
+height:auto;
+}
+
+.title-wrapper { text-align: center; }
+
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="title-wrapper">
+    <div class="title">
+      <a href="https://ormedica.wordpress.com/" target="_blank">
+      <img src="LogOM5.png" alt="Ormedica logo" class="logo">
+      </a>
+      <h1 class="title-text">Score cutáneo modificado de Rodnan (mRSS)</h1>
+    </div>
+  </div>
+
+
+<div class="grid">
+
+<div></div>
+<div class="header">Engrosamiento<br>leve</div>
+<div class="header">Engrosamiento<br>moderado</div>
+<div class="header">Engrosamiento<br>severo</div>
+
+<div class="area">Cara</div>
+<div class="center"><input type="radio" name="face" value="1"></div>
+<div class="center"><input type="radio" name="face" value="2"></div>
+<div class="center"><input type="radio" name="face" value="3"></div>
+
+<div class="area">Tronco</div>
+<div class="center"><input type="radio" name="chest" value="1"></div>
+<div class="center"><input type="radio" name="chest" value="2"></div>
+<div class="center"><input type="radio" name="chest" value="3"></div>
+
+<div class="area">Abdomen</div>
+<div class="center"><input type="radio" name="abdomen" value="1"></div>
+<div class="center"><input type="radio" name="abdomen" value="2"></div>
+<div class="center"><input type="radio" name="abdomen" value="3"></div>
+
+<div class="separator">Extremidad superior derecha</div>
+
+<div>Brazo</div>
+<div class="center"><input type="radio" name="rua" value="1"></div>
+<div class="center"><input type="radio" name="rua" value="2"></div>
+<div class="center"><input type="radio" name="rua" value="3"></div>
+
+<div>Antebrazo</div>
+<div class="center"><input type="radio" name="rfa" value="1"></div>
+<div class="center"><input type="radio" name="rfa" value="2"></div>
+<div class="center"><input type="radio" name="rfa" value="3"></div>
+
+<div>Mano</div>
+<div class="center"><input type="radio" name="rhand" value="1"></div>
+<div class="center"><input type="radio" name="rhand" value="2"></div>
+<div class="center"><input type="radio" name="rhand" value="3"></div>
+
+<div>Dedos</div>
+<div class="center"><input type="radio" name="rfingers" value="1"></div>
+<div class="center"><input type="radio" name="rfingers" value="2"></div>
+<div class="center"><input type="radio" name="rfingers" value="3"></div>
+
+<div class="separator">Extremidad superior izquierda</div>
+
+<div>Brazo</div>
+<div class="center"><input type="radio" name="lua" value="1"></div>
+<div class="center"><input type="radio" name="lua" value="2"></div>
+<div class="center"><input type="radio" name="lua" value="3"></div>
+
+<div>Antebrazo</div>
+<div class="center"><input type="radio" name="lfa" value="1"></div>
+<div class="center"><input type="radio" name="lfa" value="2"></div>
+<div class="center"><input type="radio" name="lfa" value="3"></div>
+
+<div>Mano</div>
+<div class="center"><input type="radio" name="lhand" value="1"></div>
+<div class="center"><input type="radio" name="lhand" value="2"></div>
+<div class="center"><input type="radio" name="lhand" value="3"></div>
+
+<div>Dedos</div>
+<div class="center"><input type="radio" name="lfingers" value="1"></div>
+<div class="center"><input type="radio" name="lfingers" value="2"></div>
+<div class="center"><input type="radio" name="lfingers" value="3"></div>
+
+<div class="separator">Extremidad inferior derecha</div>
+
+<div>Muslo</div>
+<div class="center"><input type="radio" name="rthigh" value="1"></div>
+<div class="center"><input type="radio" name="rthigh" value="2"></div>
+<div class="center"><input type="radio" name="rthigh" value="3"></div>
+
+<div>Pierna</div>
+<div class="center"><input type="radio" name="rleg" value="1"></div>
+<div class="center"><input type="radio" name="rleg" value="2"></div>
+<div class="center"><input type="radio" name="rleg" value="3"></div>
+
+<div>Pie</div>
+<div class="center"><input type="radio" name="rfoot" value="1"></div>
+<div class="center"><input type="radio" name="rfoot" value="2"></div>
+<div class="center"><input type="radio" name="rfoot" value="3"></div>
+
+<div class="separator">Extremidad inferior izquierda</div>
+
+<div>Muslo</div>
+<div class="center"><input type="radio" name="lthigh" value="1"></div>
+<div class="center"><input type="radio" name="lthigh" value="2"></div>
+<div class="center"><input type="radio" name="lthigh" value="3"></div>
+
+<div>Pierna</div>
+<div class="center"><input type="radio" name="lleg" value="1"></div>
+<div class="center"><input type="radio" name="lleg" value="2"></div>
+<div class="center"><input type="radio" name="lleg" value="3"></div>
+
+<div>Pie</div>
+<div class="center"><input type="radio" name="lfoot" value="1"></div>
+<div class="center"><input type="radio" name="lfoot" value="2"></div>
+<div class="center"><input type="radio" name="lfoot" value="3"></div>
+
+</div>
+
+<div class="buttons">
+<button onclick="calculate()">Calcular mRSS</button>
+<button onclick="resetForm()">Reset</button>
+</div>
+
+<div class="result" id="result"></div>
+<div class="references">
+<b>References</b><br><br>
+
+Rodnan GP, Lipinski E, Luksick J. Skin thickness and collagen content in progressive systemic sclerosis and localized scleroderma. 
+<em>Arthritis Rheum.</em> 1979;22:130–140.<br><br>
+
+Clements P, Lachenbruch P, Seibold J, et al. Skin thickness score in systemic sclerosis: an assessment of interobserver variability 
+in 3 independent studies. <em>J Rheumatol.</em> 1993;20:1892–1896.<br><br>
+
+Clements PJ, Hurwitz EL, Wong WK, et al. Skin thickness score as a predictor and correlate of outcome in systemic sclerosis. 
+<em>Arthritis Rheum.</em> 2000;43:2445–2454.
+</div>
+
+</div>
+
+<div class="figure">
+<img src="https://ormedica.wordpress.com/wp-content/uploads/2026/03/rodnan.png" 
+alt="Modified Rodnan Skin Score areas">
+</div>
+
+<script>
+
+function calculate(){
+
+let total=0;
+
+document.querySelectorAll("input[type=radio]:checked").forEach(el=>{
+total += parseInt(el.value);
+});
+
+document.getElementById("result").innerHTML =
+"Total mRSS Score: " + total + " / 51";
+
+}
+
+function resetForm(){
+
+document.querySelectorAll("input[type=radio]").forEach(r=>r.checked=false);
+document.getElementById("result").innerHTML="";
+
+}
+
+</script>
+
+</body>
+</html>
